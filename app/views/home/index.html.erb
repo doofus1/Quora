@@ -1,0 +1,19 @@
+<h1>Home#index</h1>
+
+<div class="Question">
+
+<%= form_for @question do |f| %>
+
+<%= f.label :content %> <br>
+
+<%= f.text_area :content %>  <br>
+
+<div class="actions">
+<%= f.submit  id: 'create_question_submit' %>
+</div>
+<% end %>
+ <% if @question.errors.any? %>
+       <% @question.errors.full_messages.each do |message| %>
+<% end %>
+<% end %>
+</div>
